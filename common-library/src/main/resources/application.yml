@@ -1,0 +1,10 @@
+spring:
+  main:
+    lazy-initialization: true
+  jackson:
+    default-property-inclusion: non_empty
+    deserialization:
+      unwrap-root-value: true
+      fail-on-unknown-properties: false
+    serialization:
+      wrap-root-value: true
