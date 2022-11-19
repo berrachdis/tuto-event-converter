@@ -1,17 +1,17 @@
 {
-  "Commissioning": {
+  "Deactivation": {
     "Message_ID": "TEST0002-ID-DEACTIVATION",
-    "F_ID": "TEST0002",
     "Event_Time": "20070216",
     "Record_Time": "2020-01-01T10:00:00Z",
-    "upUI_1": [
+    "Deact_Type": 3,
+    "Deact_upUI": [
       "LEGR1seriSB128",
       "LEGR1seriSB129"
     ],
-    "upUI_2": [
+    "Deact_aUI": [
       "LEGR1seriSB128",
       "LEGR1seriSB129"
     ],
-    "Commissioning_Comment": "Commissioning comment"
+    "Deactivation_Comment": "Deactivation comment"
   }
 }

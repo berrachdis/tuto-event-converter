@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
@@ -18,7 +20,8 @@ public class DeactivationMessage extends AbstractMessage {
     @JsonProperty("EO_ID")
     private String eoid;
 
-    @NotBlank(message = "The Deact_Type cannot be null or empty")
+    @Max(value = 3, message = "The Deact_Type must be between [1, 3]")
+    @Min(value = 1, message = "The Deact_Type must be between [1, 3]")
     @JsonProperty("Deact_Type")
     private int deactType;
 

@@ -1,0 +1,17 @@
+{
+  "Deactivation": {
+    "Message_ID": "TEST0002-ID-DEACTIVATION",
+    "EO_ID": "TEST0002",
+    "Record_Time": "2020-01-01T10:00:00Z",
+    "Deact_Type": 3,
+    "Deact_upUI": [
+      "LEGR1seriSB128",
+      "LEGR1seriSB129"
+    ],
+    "Deact_aUI": [
+      "LEGR1seriSB128",
+      "LEGR1seriSB129"
+    ],
+    "Deactivation_Comment": "Deactivation comment"
+  }
+}
