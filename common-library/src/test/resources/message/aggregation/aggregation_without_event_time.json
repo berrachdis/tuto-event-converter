@@ -1,0 +1,19 @@
+{
+  "Aggregation": {
+    "Message_ID": "TEST0002-ID-AGGREGATION",
+    "EO_ID": "TEST0002",
+    "F_ID": "TEST0002",
+    "Record_Time": "2020-01-01T10:00:00Z",
+    "Aggregation_Type": 3,
+    "parentAUI": "parentUI",
+    "Aggregated_UIs1": [
+      "LEGR1seriSB128",
+      "LEGR1seriSB129"
+    ],
+    "Aggregated_UIs2": [
+      "LEGR1seriSB128",
+      "LEGR1seriSB129"
+    ],
+    "Aggregation_Comment": "Aggregation comment"
+  }
+}

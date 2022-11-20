@@ -22,7 +22,7 @@ public class CommissioningMessage extends AbstractMessage {
     @JsonProperty("upUI_1")
     private List<String> upUI1 = new ArrayList<>();
 
-    @NotEmpty(message = "The upUI_1 cannot be null or empty")
+    @NotEmpty(message = "The upUI_2 cannot be null or empty")
     @JsonProperty("upUI_2")
     private List<String> upUI2 = new ArrayList<>();
 

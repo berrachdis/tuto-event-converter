@@ -14,6 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
+import static com.tuto.commonlibrary.util.TestUtil.VALIDATOR;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -73,10 +74,10 @@ public class DeactivationConverterTest {
     }, delimiter = ';')
     @SneakyThrows
     @ParameterizedTest
-    void DeactivationValidationWithMissedFieldShouldFail(String fileName, String expectedMessageError) {
+    void deactivationValidationWithMissedFieldShouldFail(String fileName, String expectedMessageError) {
         final var deactivationContentStr = TestUtil.readJsonFrom("message/deactivation", fileName);
         final var deactivationMessage = deactivationMessageJacksonTester.parseObject(deactivationContentStr);
-        final var constraintViolations = TestUtil.VALIDATOR.validate(deactivationMessage);
+        final var constraintViolations = VALIDATOR.validate(deactivationMessage);
         assertEquals(1, constraintViolations.size());
         assertEquals(expectedMessageError, constraintViolations.iterator().next().getMessage());
     }

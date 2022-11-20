@@ -1,0 +1,13 @@
+{
+  "Commissioning": {
+    "Message_ID": "TEST0002-ID-COMMISSIONING",
+    "F_ID": "TEST0002",
+    "Event_Time": "20070216",
+    "Record_Time": "2020-01-01T10:00:00Z",
+    "upUI_1": [
+      "LEGR1seriSB128",
+      "LEGR1seriSB129"
+    ],
+    "Commissioning_Comment": "Commissioning comment"
+  }
+}

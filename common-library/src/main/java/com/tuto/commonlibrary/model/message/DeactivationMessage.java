@@ -20,8 +20,8 @@ public class DeactivationMessage extends AbstractMessage {
     @JsonProperty("EO_ID")
     private String eoid;
 
-    @Max(value = 3, message = "The Deact_Type must be between [1, 3]")
     @Min(value = 1, message = "The Deact_Type must be between [1, 3]")
+    @Max(value = 3, message = "The Deact_Type must be between [1, 3]")
     @JsonProperty("Deact_Type")
     private int deactType;
 

@@ -5,9 +5,10 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +24,8 @@ public class AggregationMessage extends AbstractMessage {
     @JsonProperty("F_ID")
     private String fid;
 
+    @Min(value = 1, message = "The Aggregation_Type must be between [1, 3]")
+    @Max(value = 3, message = "The Aggregation_Type must be between [1, 3]")
     @JsonProperty("Aggregation_Type")
     private int aggregationType;
 
@@ -30,11 +33,11 @@ public class AggregationMessage extends AbstractMessage {
     @JsonProperty("parentAUI")
     private String parentId;
 
-    @NotNull(message = "The Aggregated_UIs1 cannot be null or empty")
+    @NotEmpty(message = "The Aggregated_UIs1 cannot be null or empty")
     @JsonProperty("Aggregated_UIs1")
     private List<String> aggregatedUis1 = new ArrayList<>();
 
-    @NotNull(message = "The Aggregated_UIs2 cannot be null or empty")
+    @NotEmpty(message = "The Aggregated_UIs2 cannot be null or empty")
     @JsonProperty("Aggregated_UIs2")
     private List<String> aggregatedUis2 = new ArrayList<>();
 
