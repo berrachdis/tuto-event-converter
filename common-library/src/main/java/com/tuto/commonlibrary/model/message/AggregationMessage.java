@@ -2,6 +2,7 @@ package com.tuto.commonlibrary.model.message;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.tuto.commonlibrary.validation.annotation.AggregationChecker;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AggregationChecker
 @JsonRootName(value = "Aggregation")
 public class AggregationMessage extends AbstractMessage {
     @NotBlank(message = "The EO_ID cannot be null or empty")
@@ -33,11 +35,9 @@ public class AggregationMessage extends AbstractMessage {
     @JsonProperty("parentAUI")
     private String parentId;
 
-    @NotEmpty(message = "The Aggregated_UIs1 cannot be null or empty")
     @JsonProperty("Aggregated_UIs1")
     private List<String> aggregatedUis1 = new ArrayList<>();
 
-    @NotEmpty(message = "The Aggregated_UIs2 cannot be null or empty")
     @JsonProperty("Aggregated_UIs2")
     private List<String> aggregatedUis2 = new ArrayList<>();
 

@@ -75,8 +75,8 @@ public class AggregationConverterTest {
             "aggregation_with_bad_aggregation_type.json; The Aggregation_Type must be between [1, 3]",
             "aggregation_without_aggregation_type.json; The Aggregation_Type must be between [1, 3]",
             "aggregation_without_parentAUI.json; The parentAUI cannot be null or empty",
-            "aggregation_without_aggregated_uis1.json; The Aggregated_UIs1 cannot be null or empty",
-            "aggregation_without_aggregated_uis2.json; The Aggregated_UIs2 cannot be null or empty",
+            "aggregation_without_aggregated_uis1.json; AggregatedUIs1 is mandatory and must not be null or empty because aggrationType is equals to 1 or 3",
+            "aggregation_without_aggregated_uis2.json; AggregatedUIs2 is mandatory and must not be null or empty because aggrationType is equals to 2 or 3",
     }, delimiter = ';')
     @SneakyThrows
     @ParameterizedTest

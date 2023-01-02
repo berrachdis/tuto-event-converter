@@ -69,8 +69,8 @@ public class DeactivationConverterTest {
             "deactivation_with_bad_event_time.json; The Event_Time must match with yyMMddHH format",
             "deactivation_without_record_time.json; The Record_Time cannot be null or empty",
             "deactivation_without_deact_type.json; The Deact_Type must be between [1, 3]",
-            "deactivation_without_deact_aUI.json; The Deact_aUI cannot be null or empty",
-            "deactivation_without_deact_upUI.json; The Deact_upUI cannot be null or empty",
+            "deactivation_without_deact_aUI.json; DeactAUIs is mandatory and must not be null or empty because deactType is equals to 2 or 3",
+            "deactivation_without_deact_upUI.json; DeactUpUIs is mandatory and must not be null or empty because deactType is equals to 1 or 3",
     }, delimiter = ';')
     @SneakyThrows
     @ParameterizedTest
